@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Chef Website</title>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+   <link rel="stylesheet" href="style.css">
+   <script src="server.js"></script>
+   <script src="script.js"></script>
+</head>
+<body>
+   <header>
+       <a href="#" class="logo">Chef</a>
+       <div class="bx bx-menu" id="menu-icon"></div>
+
+       <ul class="navbar">
+           <li><a href="#home">Home</a></li>
+           <li><a href="#services">Services</a></li>
+           <li><a href="#chefs">Our Chefs</a></li>
+           <li><a href="#contact">Contact</a></li>
+       </ul>
+   </header>
+
+   <section class="home" id="home">
+       <div class="home-container">
+           <div class="home-text">
+               <h3>More Than Faster</h3>
+               <h1>Be The Faster <br>In Delivering <br>Your <span>Food</span></h1>
+               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt, et aliquam</p>
+               <a href="#contact" class="btn">Contact Here</a>
+           </div>
+           <div class="home-img">
+               <img src="img/chef.png" alt="Chef Image">
+           </div>
+       </div>
+   </section>
+
+   <!-- Services Section -->
+   <section class="services" id="services">
+       <div class="heading">
+           <p>What We Serve</p>
+           <h2>Your Favourite Food <br> Delivery Partner</h2>
+       </div>
+       <div class="services-container">
+           <div class="box">
+               <img src="img/order.png" alt="">
+               <h2>Easy To Order</h2>
+               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus, ipsa?</p>
+           </div>
+           <div class="box">
+               <img src="img/ship.png" alt="">
+               <h2>Faster Delivery</h2>
+               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus, ipsa?</p>
+           </div>
+           <div class="box">
+               <img src="img/deliver.png" alt="">
+               <h2>Best Quality</h2>
+               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus, ipsa?</p>
+           </div>
+       </div>
+   </section>
+
+   <!-- Chefs Section -->
+   <section class="chefs" id="chefs">
+       <div class="heading">
+           <p>Our Chefs</p>
+           <h2>Our Awesome Chef's</h2>
+       </div>
+       <div class="chefs-container">
+           <div class="chef-box">
+               <img src="img/chef1.jpg" alt="">
+               <div class="text">
+                   <h2>John Watson</h2>
+                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, delectus.</p>
+                   <a href="#" class="btn">Hire Now</a>
+               </div>
+           </div>
+           <div class="chef-box">
+               <img src="img/chef2.jpg" alt="">
+               <div class="text">
+                   <h2>Alexa Gomez</h2>
+                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, delectus.</p>
+                   <a href="#" class="btn">Hire Now</a>
+               </div>
+           </div>
+           <div class="chef-box">
+               <img src="img/chef3.jpg" alt="">
+               <div class="text">
+                   <h2>Richard</h2>
+                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, delectus.</p>
+                   <a href="#" class="btn">Hire Now</a>
+               </div>
+           </div>
+       </div>
+   </section>
+
+   <!-- User Information Form -->
+   <section class="contact" id="user-info">
+       <div class="heading">
+           <p>Need to Reach Out?</p>
+           <h2>User Information</h2>
+       </div>
+       <div class="contact-form">
+           <form action="">
+               <input type="text" id="name" placeholder="Your Name">
+               <input type="email" id="email" placeholder="Enter Your Email...">
+               <textarea id="message" placeholder="Write Your Message Here...."></textarea>
+
+               <!-- Add Button for Create -->
+               <input type="button" value="Add" class="contact-button" id="addButton" onclick="createUser()">
+
+               <!-- Update Button for Update User, initially hidden -->
+               <input type="button" value="Update User" class="contact-button" id="updateButton" style="display:none" onclick="updateUser()">
+           </form>
+       </div>
+   </section>
+
+  
+
+   <!-- Users list -->
+   <section class="txt-color">
+       <h2 style="text-align: center;">Users List</h2>
+       <table id="userTable">
+           <thead>
+               <tr>
+                   <th>ID</th>
+                   <th>Name</th>
+                   <th>Email</th>
+                   <th>Message</th>
+                   <th>Action</th>
+               </tr>
+           </thead>
+           <tbody id="userList"></tbody>
+       </table>
+   </section>
+
+   <!-- Footer Section with SRS Button -->
+<div class="copyright">
+    <p>&#169; CarpoolVenom All Rights Reserved.</p>
+    <!-- SRS Button Added at the End -->
+   <button><a href="https://drive.google.com/file/d/1Rzzeiz6Rx-dc4CjS_so-mX3etMxfjFHj/view?usp=drivesdk" target="_blank" class="btn">View SRS Document</a></button>
+ </div>
+ 

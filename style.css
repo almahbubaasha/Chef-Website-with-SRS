@@ -1,0 +1,481 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+   margin: 0;
+   padding: 0;
+   scroll-behavior: smooth;
+   box-sizing: border-box;
+   scroll-padding-top: 2rem;
+   list-style: none;
+   text-decoration: none;
+   font-family: "Poppins", sans-serif;
+}
+
+
+:root {
+   --main-color: #f54744;
+   --text-color: #2f2f2f;
+   --bg-color: #fff;
+
+
+   --big-font: 3.2rem;
+   --h2-font: 2rem;
+}
+
+
+body {
+   color: var(--text-color);
+   background: var(--bg-color);
+}
+
+
+/* Header Section */
+header {
+   position: fixed;
+   width: 100%;
+   top: 0;
+   right: 0;
+   z-index: 1000;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   background: #fff4f3;
+   padding: 18px 10%;
+}
+
+
+.logo {
+   font-size: 1.2rem;
+   font-weight: 600;
+   color: var(--main-color);
+}
+
+
+.navbar {
+   display: flex;
+}
+
+
+.navbar a {
+   font-size: 1rem;
+   padding: 10px 20px;
+   color: var(--text-color);
+   font-weight: 500;
+}
+
+
+.navbar a:hover {
+   background: var(--main-color);
+   color: #fff;
+   border-radius: 2rem;
+}
+
+
+#menu-icon {
+   font-size: 2rem;
+   cursor: pointer;
+   display: none;
+}
+
+
+/* Home Section */
+.home {
+   background: #fff4f3;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 100px 0;
+}
+
+
+.home-container {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: space-between;
+   gap: 2rem;
+   max-width: 1200px;
+   width: 100%;
+   padding: 0 10px;
+}
+
+
+.home-text {
+   flex: 1;
+}
+
+
+.home-text h3 {
+   color: var(--main-color);
+   font-size: 1.2rem;
+   margin-bottom: 10px;
+}
+
+
+.home-text h1 {
+   font-size: 2.5rem;
+   margin-bottom: 20px;
+}
+
+
+.home-text span {
+   color: var(--main-color);
+}
+
+
+.home-text p {
+   margin-bottom: 20px;
+   max-width: 80%;
+}
+
+
+.home-img {
+   flex: 1;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+
+.home-img img {
+   width: 100%;
+   max-width: 500px;
+   height: auto;
+   object-fit: cover;
+   border-radius: 10px;
+}
+
+
+/* Responsive Design */
+@media (max-width: 991px) {
+   .home-container {
+       flex-direction: column;
+       text-align: center;
+   }
+
+
+   .home-text h1 {
+       font-size: 2rem;
+   }
+
+
+   .home-img img {
+       max-width: 80%;
+   }
+}
+
+
+/* Style for buttons in the user list */
+#userList button {
+   background-color: var(--main-color); /* Use the main color from your design */
+   color: white; /* Text color for the buttons */
+   border: none;
+   padding: 8px 15px;
+   margin: 5px;
+   border-radius: 5px;
+   cursor: pointer;
+   font-size: 1rem;
+}
+
+
+/* Button hover effect */
+#userList button:hover {
+    background-color: #fc5552; /* Change to a darker color on hover */
+}
+
+/* Optional: Make buttons stand out more */
+#userList button:focus {
+    outline: none; /* Remove outline for focus */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow on focus */
+}
+
+ /* Heading Styling */
+ .heading {
+    text-align: center;
+ }
+ 
+ .heading p {
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--main-color);
+ }
+ 
+ .heading h2 {
+    font-size: var(--h2-font);
+ }
+ 
+ /* Services Container Styling */
+ .services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, auto));
+    gap: 1.5rem;
+    margin-top: 4rem;
+ }
+ 
+ /* Service Box Styling */
+ .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+ }
+ 
+ .box img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+ }
+ 
+ .box h2 {
+    font-size: 1.2rem;
+    margin: 1.7rem 0 1rem;
+ }
+ 
+
+/* Chefs Section */
+.chefs .chefs-container {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 1.5rem;
+   margin-top: 1.5rem;
+}
+
+
+.chefs .chefs-container .chef-box {
+   position: relative;
+   height: 420px;
+   flex: 1 1 18rem;
+   overflow: hidden;
+}
+
+
+.chefs .chefs-container .chef-box img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
+
+.chefs .chefs-container .chef-box .text {
+   position: absolute;
+   top: -100%;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   text-align: center;
+   padding: 20px;
+   padding-top: 8rem;
+   background: rgba(255, 244, 243, 0.78);
+   transition: 0.5s;
+}
+
+
+.chefs .chefs-container .chef-box:hover .text {
+   top: 0;
+}
+
+
+.chef-box .text p {
+   margin: 0.4rem 0 1rem;
+}
+
+
+/* Contact Form */
+<section class="contact-form" id="user">
+   <div class="heading">
+      <p>Contact Us</p>
+      <h2>User Information Form</h2>
+   </div>
+   <form id="userform">
+      <input type="text" id="name" name="name" placeholder="Name" required>
+      <input type="email" id="email" name="email" placeholder="Email" required>
+      <textarea id="message" name="message" placeholder="Message" required></textarea>
+      <button type="button" onclick="createUser()">Add User</button>
+      <button type="button" onclick="updateUser()" style="display: none;">Update User</button>
+   </form>
+</section>
+
+
+//* User Information Section */
+#user-info {
+    background: #fff4f3;
+    padding: 40px 10%;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ }
+ 
+ 
+ #user-info .heading {
+    text-align: center;
+    margin-bottom: 30px;
+ }
+ 
+ 
+ #user-info .heading p {
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--main-color);
+ }
+ 
+ 
+ #user-info .heading h2 {
+    font-size: var(--h2-font);
+ }
+ 
+ 
+ #user-info .contact-form {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+ }
+ 
+ 
+ #user-info .contact-form form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+ }
+ 
+ 
+ #user-info .contact-form form input,
+ #user-info .contact-form form textarea {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 10px;
+    border-radius: 0.5rem;
+    border: none;
+    outline: none;
+    background: #fff4f3;
+    font-size: 1rem;
+ }
+ 
+ 
+ #user-info .contact-form form textarea {
+    resize: none;
+    height: 200px;
+ }
+ 
+ 
+ #user-info .contact-form form input[type="button"] {
+    font-weight: 500;
+    color: #fff;
+    background: var(--main-color);
+    cursor: pointer;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 12px 20px;
+    transition: background 0.3s;
+ }
+ 
+ 
+ #user-info .contact-form form input[type="button"]:hover {
+    background: #fc5552;
+ }
+ 
+/* User List Section */
+section.txt-color {
+   background: #fff;
+   padding: 40px 10%;
+   margin: 20px auto;
+   border-radius: 10px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+section.txt-color h2 {
+   text-align: center;
+   font-size: var(--h2-font);
+   color: var(--text-color);
+   margin-bottom: 20px;
+}
+
+
+#userTable {
+   width: 100%;
+   border-collapse: collapse;
+   margin-top: 20px;
+   text-align: left;
+}
+
+
+#userTable th,
+#userTable td {
+   border: 1px solid #ddd;
+   padding: 10px;
+}
+
+
+#userTable th {
+   background: var(--main-color);
+   color: #fff;
+   font-weight: 600;
+}
+
+
+#userTable tr:nth-child(even) {
+   background: #f9f9f9;
+}
+
+
+#userTable tr:hover {
+   background: rgba(245, 71, 68, 0.1);
+}
+
+
+#userTable td button {
+   padding: 6px 12px;
+   border: none;
+   border-radius: 3px;
+   color: #fff;
+   cursor: pointer;
+}
+
+
+#userTable td button.edit {
+   background: #ffa500;
+}
+
+
+#userTable td button.edit:hover {
+   background: #ff9800;
+}
+
+
+#userTable td button.delete {
+   background: var(--main-color);
+}
+
+
+#userTable td button.delete:hover {
+   background: #fc5552;
+}
+
+
+
+
+/*/srs section
+
+.srs-button {
+    background-color: #f54744; /* Your primary color */
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    border-radius: 8px;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none; /* Remove underline from the link */
+    transition: background-color 0.3s ease;
+}
+
+.srs-button a {
+    color: white; /* Make sure the link text is white */
+    text-decoration: none; /* Ensure the link has no underline */
+}
+
+.srs-button:hover {
+    background-color: #d43f38; /* Darker shade on hover */
+}
+
